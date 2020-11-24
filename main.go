@@ -18,5 +18,5 @@ func main() {
 
 // Echo just tells you the request you made
 func Echo(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(w, "You asked to", r.Method, r.URL.Path)
+	fmt.Fprintln(w, "You asked to", r.Method, r.URL.Path)
 }
