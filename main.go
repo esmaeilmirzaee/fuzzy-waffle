@@ -22,8 +22,8 @@ func main() {
 	api := http.Server{
 		Addr:         ":8000",
 		Handler:      http.HandlerFunc(Echo),
-		ReadTimeout:  5 * time.Second,
-		WriteTimeout: 5 * time.Second,
+		ReadTimeout:  5 * time.Second, // TODO: Why?
+		WriteTimeout: 5 * time.Second, // TODO: Why?
 	}
 
 	// Make a channel to listen for errors coming from the listener
